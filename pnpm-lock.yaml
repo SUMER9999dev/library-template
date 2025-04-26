@@ -14,9 +14,12 @@ importers:
       '@rbxts/compiler-types':
         specifier: ^3.0.0-types.0
         version: 3.0.0-types.0
-      '@rbxts/testez':
-        specifier: ^0.4.2-ts.0
-        version: 0.4.2-ts.0
+      '@rbxts/jest':
+        specifier: ^0.1.0
+        version: 0.1.0
+      '@rbxts/jest-globals':
+        specifier: ^0.1.0
+        version: 0.1.0
       '@rbxts/types':
         specifier: ^1.0.813
         version: 1.0.813
@@ -120,8 +123,23 @@ packages:
   '@rbxts/compiler-types@3.0.0-types.0':
     resolution: {integrity: sha512-VGOHJPoL7+56NTatMGqQj3K7xWuzEV+aP4QD5vZiHu+bcff3kiTmtoadaF6NkJrmwfFAvbsd4Dg764ZjWNceag==}
 
-  '@rbxts/testez@0.4.2-ts.0':
-    resolution: {integrity: sha512-8Q+OG9ddTD2P3aARCuRKpPqUBvuifgSnHvQMZ6jBMqUzxhIysnb0l4c3vnnaQnvdyZ1OW9tKxcdEHMGTb67uOw==}
+  '@rbxts/jest-globals@0.1.0':
+    resolution: {integrity: sha512-k6sPSVfohlHRLLBT+LuK5xhWy87YzNg7LpcWmPkzXZUUM6iUU+uXWtphegcT+fR4ZHRXFt0tjDepA61uMRQQQA==}
+
+  '@rbxts/jest-matcher-utils@0.1.0':
+    resolution: {integrity: sha512-SvUm5b47KvxjXWMdg3Ei7nMaAurLI8uDlOR7lN02QNCSSqm1KekkLe1p/knc4adyZuq3L/07cDUSRYLCIgn9qA==}
+
+  '@rbxts/jest-vendor@0.1.0':
+    resolution: {integrity: sha512-qEQbp8cUtIkiOFoxIC2wR7ml3++0Pf56Xf17YIGTQRrQig3UAZincD+DHxVd/YNHft38MRGpD7FinWfroNxUNA==}
+
+  '@rbxts/jest@0.1.0':
+    resolution: {integrity: sha512-0JmmHh0vPbydCRhPWNaU8eb9RcY82i80RP6N5uJphLSZSV57kUvX8ahk1RhbPcn8xFoTmh+Pm6YEdGiPAzX1BA==}
+
+  '@rbxts/pretty-format@0.1.0':
+    resolution: {integrity: sha512-ZEZM6wd2kWXhXYcr+Q6Vey2wcre6JP6LDRX4u6PnLOEHmSy5XiLCmed1sicYFQfFYgkG5bRk+sGCySSWFEbqoA==}
+
+  '@rbxts/react-vendor@17.2.3':
+    resolution: {integrity: sha512-dWCiVelvTK6h920geaFH/OQ5zoWHyhyqyfH51hKx2/iVZ6OiiyNVJ5UqEIkJMG4HsJ8JnkTORizV3+MtQ41BtA==}
 
   '@rbxts/types@1.0.813':
     resolution: {integrity: sha512-Qpsmqnl+TNdl5AYqKFkYHyUrv652r30qK6A3GObOyDz+cvn8i+HE61mO021oq0nu1FcA4pMHbYqLSbv2CMF9Ig==}
@@ -856,7 +874,32 @@ snapshots:
 
   '@rbxts/compiler-types@3.0.0-types.0': {}
 
-  '@rbxts/testez@0.4.2-ts.0': {}
+  '@rbxts/jest-globals@0.1.0':
+    dependencies:
+      '@rbxts/jest-matcher-utils': 0.1.0
+      '@rbxts/jest-vendor': 0.1.0
+      '@rbxts/pretty-format': 0.1.0
+
+  '@rbxts/jest-matcher-utils@0.1.0':
+    dependencies:
+      '@rbxts/jest-vendor': 0.1.0
+      '@rbxts/pretty-format': 0.1.0
+
+  '@rbxts/jest-vendor@0.1.0':
+    dependencies:
+      '@rbxts/react-vendor': 17.2.3
+
+  '@rbxts/jest@0.1.0':
+    dependencies:
+      '@rbxts/jest-globals': 0.1.0
+      '@rbxts/jest-vendor': 0.1.0
+      '@rbxts/pretty-format': 0.1.0
+
+  '@rbxts/pretty-format@0.1.0':
+    dependencies:
+      '@rbxts/jest-vendor': 0.1.0
+
+  '@rbxts/react-vendor@17.2.3': {}
 
   '@rbxts/types@1.0.813': {}
 
