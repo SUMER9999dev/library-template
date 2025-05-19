@@ -24,7 +24,7 @@
     "devBuild": "rbxtsc --type game --rojo dev.project.json",
     "devWatch": "rbxtsc --watch --type game --rojo dev.project.json",
     "serve": "rojo serve dev.project.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build"
   },
   "keywords": [],
   "author": "sumer_real",
@@ -32,8 +32,8 @@
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@rbxts/compiler-types": "^3.0.0-types.0",
-    "@rbxts/jest": "^0.1.0",
-    "@rbxts/jest-globals": "^0.1.0",
+    "@rbxts/jest": "3.13.2-alpha.1",
+    "@rbxts/jest-globals": "3.13.2-alpha.1",
     "@rbxts/types": "^1.0.813",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
